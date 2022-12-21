@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "lib": ["ESNext", "DOM"],
+    "target": "ES5",
+    "declaration": true,
+    "noEmit": true,
+    "outDir": "dist",
+    "moduleResolution": "node"
+  },
+  "include": ["src"]
+}

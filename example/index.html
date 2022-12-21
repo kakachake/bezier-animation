@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="start()">开始</button>
+    <button onclick="stop()">暂停</button>
+    <button onclick="_continue()">继续</button>
+    <button onclick="setBezier('ease')">ease</button>
+    <button onclick="setBezier('easeIn')">easeIn</button>
+    <button onclick="setBezier('easeOut')">easeOut</button>
+    <button onclick="setBezier('easeInOut')">easeInOut</button>
+    <div style="overflow: hidden">
+      <div
+        id="box"
+        style="
+          width: 100px;
+          height: 100px;
+          background: red;
+          position: absolute;
+          line-height: 100px;
+          text-align: center;
+          color: #fff;
+        "
+      >
+        ease
+      </div>
+      <div
+        id="boxDefault"
+        style="
+          width: 100px;
+          height: 100px;
+          background: rgb(0, 21, 255);
+          color: #fff;
+          line-height: 100px;
+          text-align: center;
+          position: absolute;
+          left: 150px;
+        "
+      >
+        linear
+      </div>
+    </div>
+  </body>
+  <script src="../dist/index.umd.js"></script>
+  <script>
+    const from = document.getElementById("box").offsetTop;
+    const box = new EasyAnimation({
+      from: {
+        top: 31,
+      },
+      to: {
+        top: 200,
+      },
+      duration: 2000,
+      onUpdate: (value) => {
+        console.log(value);
+        document.getElementById("box").style.top = value.top + "px";
+      },
+    });
+    const boxDefault = new EasyAnimation({
+      from: {
+        top: 31,
+      },
+      to: {
+        top: 200,
+      },
+      duration: 2000,
+      easing: "linear",
+      onUpdate: (value) => {
+        console.log(value);
+        document.getElementById("boxDefault").style.top = value.top + "px";
+      },
+    });
+
+    function setBezier(type) {
+      box.setBezier(type);
+      document.getElementById("box").innerText = type;
+    }
+
+    function start() {
+      box.start();
+      boxDefault.start();
+    }
+
+    function _continue() {
+      box.continue();
+      boxDefault.continue();
+    }
+
+    function stop() {
+      box.stop();
+      boxDefault.stop();
+    }
+
+    box.update(0.5, (opt) => {
+      console.log(opt);
+    });
+  </script>
+</html>
