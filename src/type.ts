@@ -6,7 +6,7 @@ export type BezierOption =
   | DefaultBezier
   | [x1: number, y1: number, x2: number, y2: number];
 
-export type EasyAnimationConfig<T extends Record<string, number> = any> = {
+export type BezierAnimationConfig<T extends Record<string, number> = any> = {
   /**
    * 动画开始的值
    * default: -

@@ -1,9 +1,9 @@
-# easy-animation
+# bezier-animation
 
 ## Install
 
 ```bash
-npm i easy-animation
+npm i bezier-animation
 ```
 
 ## Usage
@@ -11,8 +11,8 @@ npm i easy-animation
 ### ES Module
 
 ```js
-import EasyAnimation from "easy-animation";
-const box = new EasyAnimation({
+import BezierAnimation from "bezier-animation";
+const box = new BezierAnimation({
   from: {
     top: 0,
   },

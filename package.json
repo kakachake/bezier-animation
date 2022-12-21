@@ -1,5 +1,5 @@
 {
-  "name": "easy-animation",
+  "name": "bezier-animation",
   "version": "0.0.3",
   "description": "",
   "main": "./dist/index.cjs.js",
@@ -23,12 +23,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kakachake/easy-animation.git"
+    "url": "git+https://github.com/kakachake/bezier-animation.git"
   },
   "bugs": {
-    "url": "https://github.com/kakachake/easy-animation/issues"
+    "url": "https://github.com/kakachake/bezier-animation/issues"
   },
-  "homepage": "https://github.com/kakachake/easy-animation#readme",
+  "homepage": "https://github.com/kakachake/bezier-animation#readme",
   "devDependencies": {
     "@rollup/plugin-typescript": "^10.0.1",
     "rollup": "^3.7.5",

@@ -1,7 +1,7 @@
 import { createBezier } from "./bezier";
-import { BezierOption, EasyAnimationConfig } from "./type";
+import { BezierOption, BezierAnimationConfig } from "./type";
 
-const defaultConfig: Partial<EasyAnimationConfig> = {
+const defaultConfig: Partial<BezierAnimationConfig> = {
   easing: "ease",
   delay: 0,
   loop: false,
@@ -32,8 +32,8 @@ function hasSameKeys<T extends Record<string, number>>(
   return true;
 }
 
-export default function EasyAnimation<T extends Record<string, number>>(
-  userConfig: EasyAnimationConfig<T>
+export default function BezierAnimation<T extends Record<string, number>>(
+  userConfig: BezierAnimationConfig<T>
 ) {
   const config = { ...userConfig, ...defaultConfig };
   const { from, to, duration, easing, delay, onUpdate, onComplete } = config;

@@ -15,7 +15,7 @@ export default defineConfig({
     {
       format: "umd",
       file: "dist/index.umd.js",
-      name: "EasyAnimation",
+      name: "BezierAnimation",
     },
   ],
   plugins: [typescript()],
