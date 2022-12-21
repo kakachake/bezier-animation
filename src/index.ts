@@ -4,7 +4,7 @@ import { BezierOption, EasyAnimationConfig } from "./type";
 const defaultConfig: Partial<EasyAnimationConfig> = {
   easing: "ease",
   delay: 0,
-  loop: 5,
+  loop: false,
 };
 
 function isNull(obj: any) {
