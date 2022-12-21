@@ -11,7 +11,7 @@ npm i easy-animation
 ### ES Module
 
 ```js
-import EasyAnimation from "esay-animation";
+import EasyAnimation from "easy-animation";
 const box = new EasyAnimation({
   from: {
     top: 0,
