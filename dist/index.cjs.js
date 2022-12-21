@@ -124,7 +124,7 @@ function createBezier(bezier) {
 var defaultConfig = {
     easing: "ease",
     delay: 0,
-    loop: 5,
+    loop: false,
 };
 function isNull(obj) {
     return (obj === null ||
