@@ -144,7 +144,7 @@ function hasSameKeys(obj1, obj2) {
     }
     return true;
 }
-function EasyAnimation(userConfig) {
+function BezierAnimation(userConfig) {
     var _this = this;
     var config = __assign(__assign({}, userConfig), defaultConfig);
     var from = config.from, to = config.to, duration = config.duration, easing = config.easing; config.delay; var onUpdate = config.onUpdate, onComplete = config.onComplete;
@@ -219,4 +219,4 @@ function EasyAnimation(userConfig) {
     };
 }
 
-module.exports = EasyAnimation;
+module.exports = BezierAnimation;

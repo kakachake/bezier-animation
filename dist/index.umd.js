@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.EasyAnimation = factory());
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.BezierAnimation = factory());
 })(this, (function () { 'use strict';
 
     /******************************************************************************
@@ -148,7 +148,7 @@
         }
         return true;
     }
-    function EasyAnimation(userConfig) {
+    function BezierAnimation(userConfig) {
         var _this = this;
         var config = __assign(__assign({}, userConfig), defaultConfig);
         var from = config.from, to = config.to, duration = config.duration, easing = config.easing; config.delay; var onUpdate = config.onUpdate, onComplete = config.onComplete;
@@ -223,6 +223,6 @@
         };
     }
 
-    return EasyAnimation;
+    return BezierAnimation;
 
 }));
