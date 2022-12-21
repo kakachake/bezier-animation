@@ -1,5 +1,5 @@
 {
-  "name": "esay-bezier-animation",
+  "name": "easy-bezier-animation",
   "version": "0.0.3",
   "description": "",
   "main": "./dist/index.cjs.js",
