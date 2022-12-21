@@ -11,7 +11,7 @@ npm i bezier-animation
 ### ES Module
 
 ```js
-import BezierAnimation from "bezier-animation";
+import BezierAnimation from "easy-bezier-animation";
 const box = new BezierAnimation({
   from: {
     top: 0,
