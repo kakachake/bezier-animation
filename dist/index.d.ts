@@ -1,2 +1,3 @@
-import { BezierAnimationConfig } from "./type";
-export default function BezierAnimation<T extends Record<string, number>>(userConfig: BezierAnimationConfig<T>): void;
+import BezierAnimation from "./animation";
+export default BezierAnimation;
+export * from "./type";
