@@ -34,7 +34,11 @@ function hasSameKeys<T extends Record<string, number>>(
 
 export default function BezierAnimation<T extends Record<string, number>>(
   userConfig: BezierAnimationConfig<T>
-) {
+): void {
+  if (!new.target) {
+    throw new Error("BezierAnimation must be called with new");
+  }
+
   const config = { ...userConfig, ...defaultConfig };
   const { from, to, duration, easing, delay, onUpdate, onComplete } = config;
 
@@ -75,6 +79,7 @@ export default function BezierAnimation<T extends Record<string, number>>(
   };
 
   this.continue = () => {
+    window.cancelAnimationFrame(timer);
     _start();
   };
 

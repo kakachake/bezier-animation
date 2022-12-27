@@ -10,21 +10,52 @@
     <button onclick="start()">开始</button>
     <button onclick="stop()">暂停</button>
     <button onclick="_continue()">继续</button>
-    <button onclick="setBezier('ease')">ease</button>
-    <button onclick="setBezier('easeIn')">easeIn</button>
-    <button onclick="setBezier('easeOut')">easeOut</button>
-    <button onclick="setBezier('easeInOut')">easeInOut</button>
+
+    <select name="bezier" id="bezier" onchange="setBezier(this.value)">
+      <option value="ease">ease</option>
+      <option value="easeIn">easeIn</option>
+      <option value="easeOut">easeOut</option>
+      <option value="easeInOut">easeInOut</option>
+      <option value="easeInSine">easeInSine</option>
+      <option value="easeOutSine">easeOutSine</option>
+      <option value="easeInOutSine">easeInOutSine</option>
+      <option value="easeInQuad">easeInQuad</option>
+      <option value="easeOutQuad">easeOutQuad</option>
+      <option value="easeInOutQuad">easeInOutQuad</option>
+      <option value="easeInCubic">easeInCubic</option>
+      <option value="easeOutCubic">easeOutCubic</option>
+      <option value="easeInOutCubic">easeInOutCubic</option>
+      <option value="easeInQuart">easeInQuart</option>
+      <option value="easeOutQuart">easeOutQuart</option>
+      <option value="easeInOutQuart">easeInOutQuart</option>
+      <option value="easeInQuint">easeInQuint</option>
+      <option value="easeOutQuint">easeOutQuint</option>
+      <option value="easeInOutQuint">easeInOutQuint</option>
+      <option value="easeInExpo">easeInExpo</option>
+      <option value="easeOutExpo">easeOutExpo</option>
+      <option value="easeInOutExpo">easeInOutExpo</option>
+      <option value="easeInCirc">easeInCirc</option>
+      <option value="easeOutCirc">easeOutCirc</option>
+      <option value="easeInOutCirc">easeInOutCirc</option>
+      <option value="easeInBack">easeInBack</option>
+      <option value="easeOutBack">easeOutBack</option>
+      <option value="easeInOutBack">easeInOutBack</option>
+    </select>
+
     <div style="overflow: hidden">
       <div
         id="box"
         style="
-          width: 100px;
-          height: 100px;
+          width: 150px;
+          height: 150px;
           background: red;
+          display: flex;
+          align-items: center;
           position: absolute;
-          line-height: 100px;
           text-align: center;
           color: #fff;
+          justify-content: center;
+          word-break: break-all;
         "
       >
         ease
@@ -32,21 +63,21 @@
       <div
         id="boxDefault"
         style="
-          width: 100px;
-          height: 100px;
+          width: 150px;
+          height: 150px;
           background: rgb(0, 21, 255);
           color: #fff;
-          line-height: 100px;
+          line-height: 150px;
           text-align: center;
           position: absolute;
-          left: 150px;
+          left: 200px;
         "
       >
         linear
       </div>
     </div>
   </body>
-  <script src="https://unpkg.com/easy-bezier-animation@0.0.3/dist/index.umd.js"></script>
+  <script src="https://unpkg.com/easy-bezier-animation"></script>
   <script>
     const from = document.getElementById("box").offsetTop;
     const box = new BezierAnimation({
@@ -58,7 +89,6 @@
       },
       duration: 2000,
       onUpdate: (value) => {
-        console.log(value);
         document.getElementById("box").style.top = value.top + "px";
       },
     });
@@ -98,7 +128,7 @@
     }
 
     box.update(0.5, (opt) => {
-      console.log(opt);
+      // console.log(opt);
     });
   </script>
 </html>
